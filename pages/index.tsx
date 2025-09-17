@@ -5,7 +5,7 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(false);
   const [status, setStatus] = useState<{ message: string; type: 'success' | 'error' | 'info' } | null>(null);
 
-  // SIMPLE CONFIG - GANTI INI SAJA!
+  // SIMPLE CONFIG - ONLY CHANGE THIS ON CREDS!
   const CLIENT_ID = process.env.NEXT_PUBLIC_CLIENT_ID as string;
   const TENANT_ID = process.env.NEXT_PUBLIC_TENANT_ID as string;
   const REDIRECT_URI = process.env.NEXT_PUBLIC_REDIRECT_URI as string;

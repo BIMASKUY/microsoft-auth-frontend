@@ -1,29 +1,30 @@
+
 # Microsoft OAuth Test - SIMPLE VERSION
 
-Aplikasi Next.js super simple untuk testing Microsoft OAuth.
+A super simple Next.js app for testing Microsoft OAuth.
 
-## � Quick Start
+## 🚀 Quick Start
 
 1. **Install dependencies:**
    ```bash
    npm install
    ```
 
-2. **Setup Azure AD App:**
-   - Buat app di Azure Portal
+2. **Set up Azure AD App:**
+   - Create an app in Azure Portal
    - Set redirect URI: `http://localhost:3000`
-   - Copy Client ID dan Tenant ID
+   - Copy your Client ID and Tenant ID
 
 3. **Configure:**
-   
+
    **Option 1:** Edit `.env.local`
    ```
    NEXT_PUBLIC_CLIENT_ID=your_client_id_here
    NEXT_PUBLIC_TENANT_ID=your_tenant_id_here
    NEXT_PUBLIC_REDIRECT_URI=http://localhost:3000
    ```
-   
-   **Option 2:** Edit langsung di `pages/index.tsx` line 10-12
+
+   **Option 2:** Edit directly in `pages/index.tsx` lines 10-12
    ```typescript
    const CLIENT_ID = 'your_client_id_here';
    const TENANT_ID = 'your_tenant_id_here';
@@ -36,39 +37,39 @@ Aplikasi Next.js super simple untuk testing Microsoft OAuth.
    ```
 
 5. **Test:**
-   - Buka http://localhost:3000
-   - Klik "Sign in with Microsoft"
-   - Copy authorization code yang muncul
-   - Kirim ke backend Anda
+   - Open http://localhost:3000
+   - Click "Sign in with Microsoft"
+   - Copy the authorization code that appears
+   - Send it to your backend
 
 ## 📁 File Structure (Super Simple!)
 
 ```
 ├── pages/
 │   ├── _app.tsx      # App wrapper (simple)
-│   └── index.tsx     # SEMUA LOGIC DI SINI!
-├── .env.local        # Config (atau edit langsung di code)
+│   └── index.tsx     # ALL LOGIC IS HERE!
+├── .env.local        # Config (or edit directly in code)
 └── package.json      # Dependencies
 ```
 
-## 🎯 Yang Terjadi
+## 🎯 What Happens
 
-1. User klik login → redirect ke Microsoft
-2. User authenticate → Microsoft redirect balik dengan `code`
-3. App tampilkan `code` → copy dan kirim ke backend
-4. Backend exchange `code` jadi access token
+1. User clicks login → redirected to Microsoft
+2. User authenticates → Microsoft redirects back with `code`
+3. App displays the `code` → copy and send to backend
+4. Backend exchanges `code` for access token
 
-## � Troubleshooting
+## 🛠️ Troubleshooting
 
-- **Redirect URI mismatch**: Pastikan di Azure AD sama dengan config
-- **Client ID not found**: Pastikan Client ID benar
+- **Redirect URI mismatch**: Make sure it matches in Azure AD and your config
+- **Client ID not found**: Make sure your Client ID is correct
 - **Invalid state**: Normal, security feature
 
 ## 💡 Pro Tips
 
-- Semua logic ada di `pages/index.tsx` - gampang di-edit!
-- Config bisa langsung di code (line 10-12) untuk testing cepat
-- Lihat browser console untuk debug
-- Authorization code cuma bisa dipake 1x, harus ambil baru
+- All logic is in `pages/index.tsx` - easy to edit!
+- You can configure directly in code (lines 10-12) for quick testing
+- Check browser console for debugging
+- Authorization code can only be used once, get a new one each time
 
-**DONE! Simple banget kan? 😄**
+**DONE! Super simple, right? 😄**
