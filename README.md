@@ -12,23 +12,16 @@ A super simple Next.js app for testing Microsoft OAuth.
 
 2. **Set up Azure AD App:**
    - Create an app in Azure Portal
-   - Set redirect URI: `http://localhost:3000`
+   - Set redirect URI: `your_redirect_uri`
    - Copy your Client ID and Tenant ID
 
 3. **Configure:**
 
-   **Option 1:** Edit `.env.local`
+   Create `.env.local`
    ```
    NEXT_PUBLIC_CLIENT_ID=your_client_id_here
    NEXT_PUBLIC_TENANT_ID=your_tenant_id_here
-   NEXT_PUBLIC_REDIRECT_URI=http://localhost:3000
-   ```
-
-   **Option 2:** Edit directly in `pages/index.tsx` lines 10-12
-   ```typescript
-   const CLIENT_ID = 'your_client_id_here';
-   const TENANT_ID = 'your_tenant_id_here';
-   const REDIRECT_URI = 'http://localhost:3000';
+   NEXT_PUBLIC_REDIRECT_URI=your_redirect_uri
    ```
 
 4. **Run:**
@@ -72,4 +65,4 @@ A super simple Next.js app for testing Microsoft OAuth.
 - Check browser console for debugging
 - Authorization code can only be used once, get a new one each time
 
-**DONE! Super simple, right? 😄**
+**DONE! Super simple**
